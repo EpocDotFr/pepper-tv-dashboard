@@ -27,7 +27,7 @@ I'll let you search yourself about how to configure a web server along uWSGI.
 
   - Standalone
 
-Run the internal web server, which will be accessible at `http://pathfinder.local:8080`:
+Run the internal web server, which will be accessible at `http://localhost:8080`:
 
 ```
 python local.py
