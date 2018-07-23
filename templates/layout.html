@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Pepper TV Dashboard™</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/alsacreations/KNACSS/6.1.2/css/knacss.css">
+    {% block cssfiles %} {% endblock %}
+    {% assets 'css_app' %}<link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    {% block jsfiles %} {% endblock %}
+</head>
+<body class="pas man">
+    <header class="txtcenter pbs">
+        <div class="credit small">Made with <i class="fas fa-heart"></i> by <a href="https://epoc.fr">Maxime</a></div>
+
+        <h1 class="mbn mtn"><img src="https://www.pepper.com/assets/images/landing/logo.png"> TV Dashboard™</h1>
+    </header>
+
+    {% block content %} {% endblock %}
+</body>
+</html>

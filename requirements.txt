@@ -1,0 +1,7 @@
+flask
+Flask-Assets
+Flask-Caching
+jsmin
+cssutils
+requests
+lxml

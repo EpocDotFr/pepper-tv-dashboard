@@ -1,0 +1,57 @@
+body {
+    color: #FFF;
+    background-color: #000;
+    font-size: 1.9rem;
+    background-image: url(https://www.pepper.com/assets/images/landing/worldmap.png);
+    background-position: top;
+    background-size: auto;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+a,
+a:visited {
+    text-decoration: underline;
+    color: #eb7138;
+}
+
+a:hover,
+a:focus {
+    color: #eb7138;
+    text-decoration: none;
+    outline: none;
+}
+
+.credit {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+table.borderless,
+table.borderless th,
+table.borderless td {
+    border: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.site {
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid #545454;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0 #5a5a5a;
+}
+
+.site .logo {
+    max-height: 50px;
+}
+
+.site h2 {
+    border-bottom: 1px solid #545454;
+}
+
+.site h3 {
+    border-top: 1px solid #545454;
+}

@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block jsfiles %}
+    {% assets 'js_app' %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
+{% endblock %}
+
+{% block content %}
+    <div class="grid-6 has-gutter">
+        {%- for site_id, site_info in config['PEPPERS'].items() -%}
+            <div class="site pas mbs {{ site_id }}">
+                <h2 class="txtcenter h3-like pbs mbn"><img src="{{ get_site_logo_url(site_info.homepage) if not site_info.logo else site_info.logo }}" class="logo"> {{ site_info.name }}</h2>
+                <table class="borderless mbn mts">
+                    <thead>
+                        <tr>
+                            <th class="w25"></th>
+                            <th class="google-play"><i class="fab fa-android"></i> <small class="version"></small></th>
+                            <th class="itunes"><i class="fab fa-apple"></i> <small class="version"></small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rating">
+                            <th class="txtcenter"><i class="fas fa-star"></i></th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="votes">
+                            <th class="txtcenter"><i class="fas fa-users"></i></th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="detail-5">
+                            <th class="txtcenter nowrap"><i class="fas fa-star"></i> x5</th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="detail-4">
+                            <th class="txtcenter nowrap"><i class="fas fa-star"></i> x4</th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="detail-3">
+                            <th class="txtcenter nowrap"><i class="fas fa-star"></i> x3</th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="detail-2">
+                            <th class="txtcenter nowrap"><i class="fas fa-star"></i> x2</th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                        <tr class="detail-1">
+                            <th class="txtcenter nowrap"><i class="fas fa-star"></i> x1</th>
+                            <td><span class="google-play">?</span></td>
+                            <td><span class="itunes">?</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {%- endfor -%}
+    </div>
+
+    <script>
+        pepperTvDashboard.apps_info_endpoint = '{{ url_for('apps_info') }}';
+        pepperTvDashboard.init();
+    </script>
+{% endblock %}
