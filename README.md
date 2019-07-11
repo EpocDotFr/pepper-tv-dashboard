@@ -1,6 +1,6 @@
 # Pepper TV Dashboard™
 
-A web page showing various Pepper mobile apps-related data.
+A web page showing various [Pepper](https://www.pepper.com/) mobile apps-related data.
 
 ## Prerequisites
 
